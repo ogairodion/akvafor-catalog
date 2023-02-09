@@ -1,0 +1,87 @@
+.smi {
+    padding-bottom: 144px;
+    @media screen and (max-width: 991px) {
+        padding-bottom: 50px;
+    }
+    &__title {
+        margin-bottom: 36px;
+        @media screen and (max-width: 991px) {
+            margin-bottom: 30px;
+        }
+    }
+    &__subtitle {
+        max-width: 400px;
+        font-size: 24px;
+        line-height: 120%;
+        font-weight: 100;
+        margin-bottom: 41px;
+        @media screen and (max-width: 991px) {
+            margin-bottom: 20px;
+        }
+    }
+    &__slider {
+        position: relative;
+    }
+    &__slide {
+        &-img {
+            margin-bottom: 40px;
+            @media screen and (max-width: 1199px) {
+                margin-bottom: 20px;
+            }
+        }
+        &-text {
+            font-size: 24px;
+            line-height: 120%;
+            @media screen and (max-width: 991px) {
+                max-width: 300px;
+                font-size: 18px;
+                text-align: center;
+                padding: 0 20px;
+                box-sizing: border-box;
+            }
+        }
+        &-arrow {
+            position: absolute;
+            top: 60%;
+            transform: translateY(-60%);
+            transition: all .4s ease-in-out;
+            display: flex;
+            align-items: center;
+            z-index: 2;
+            font-size: 37px;
+            cursor: pointer;
+            @media screen and (max-width: 1199px) {
+                top: 64%;
+                transform: translateY(-64%);
+            }
+            @media screen and (max-width: 991px) {
+                top: 92%;
+                transform: translateY(-92%);
+            }
+            @media screen and (max-width: 767px) {
+                font-size: 25px;
+            }
+            &--next {
+                right: -3%;
+                @media screen and (max-width: 1199px) {
+                    right: 3%;
+                }
+                @media screen and (max-width: 991px) {
+                    right: 5px;
+                }
+            }
+            &--prev {
+                left: -3%;
+                transform: translateY(-56%) rotate(180deg);
+                @media screen and (max-width: 1199px) {
+                    left: 3%;
+                    transform: translateY(-64%) rotate(180deg);
+                }
+                @media screen and (max-width: 991px) {
+                    left: 10px;
+                    transform: translateY(-92%) rotate(180deg);
+                }
+            }
+        }
+    }
+}

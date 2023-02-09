@@ -1,0 +1,22 @@
+extends layouts/default
+include helpers/_mixins
+
+block variables
+  - const title = "Аквафор"
+
+block content
+  include ../blocks/modules/loader/loader.pug
+  include ../blocks/modules/header/header.pug
+  main.main
+    include ../blocks/modules/main-top/main-top.pug
+    include ../blocks/modules/quality/quality.pug
+    include ../blocks/modules/catalog/catalog.pug
+    include ../blocks/modules/about/about.pug
+    include ../blocks/modules/smi/smi.pug
+    include ../blocks/modules/bottom/bottom.pug
+  include ../blocks/modules/footer/footer.pug
+  include ../blocks/modules/popups/popups.pug
+
+block scripts
+  script(src="js/vendor.js")
+  script(src="js/main.js")

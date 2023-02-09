@@ -1,0 +1,26 @@
+footer.footer.parallax__container
+    .circle
+        picture
+            source(srcset="img/effects/circle.png" type="image/webp")
+            source(srcset="img/effects/circle.png" type="image/png")
+            img.lazy(src="img/effects/circle.png" alt="")
+    .l-default 
+        .footer__items
+            .footer__item
+                .footer__item-title Контакты
+                .footer__item-contacts
+                    a.footer__item-contact.footer__item-address(href="https://yandex.ru/maps/10758/himki/house/rabochaya_ulitsa_2ak26/Z04YcgRnT0EOQFtvfXVxd3xjZg==/?from=tabbar&ll=37.437648%2C55.906002&source=serp_navig&z=17.04" target="_blank") <span>Московская область, г. Химки</span> ул. Рабочая 2а, стр. 26, офис 309.
+                    .footer__item-contact.footer__item-email e-mail: 
+                        a(href="mailto:info@a-filter.ru") info@a-filter.ru 
+                    .footer__item-contact.footer__item-time с 10:00 до 19:00 (МСК), пн-вс 
+            .footer__item
+                .footer__item-title Каталог
+                .footer__links
+                    each catalog_item in catalog_items
+                        a.footer__link.slide-id(href="#popup-slider" data-id=catalog_item.id data-fancybox)= catalog_item.title
+            .footer__item 
+                .footer__item-phones
+                    a.footer__item-phone(href="88005552734") 8 (800) 555-27-34 
+                    a.footer__item-phone(href="+74955404698") +7 (495) 540 46 98
+                .footer__item-question Остался вопрос? <br> Позвоните нам – мы на связи!
+

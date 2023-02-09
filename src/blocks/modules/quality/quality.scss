@@ -1,0 +1,31 @@
+.quality {
+    padding-bottom: 100px;
+    @media screen and (max-width: 991px) {
+        padding-bottom: 50px;
+    }
+    @media screen and (max-width: 767px) {
+        padding-bottom: 20px;
+    }
+    &__block {
+        margin-bottom: 100px;
+        @media screen and (max-width: 991px) {
+            margin-bottom: 50px;
+        }
+        @media screen and (max-width: 767px) {
+            &:last-child {
+                margin-bottom: 20px;
+                padding: 0 20px;
+                box-sizing: border-box;
+            }
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        .l-default {
+            max-width: 100%;
+            padding: 0;
+        }
+    }
+}

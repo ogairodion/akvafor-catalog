@@ -1,0 +1,44 @@
+-
+    const stages = [
+        {
+            number: "01",
+            text: "Вы оставляете заявку и мы связываемся с вами в ближайшие сроки",
+            class: "effect--left"
+        },
+        {
+            number: "02",
+            text: "Специалисты выезжают к вам для проведения подготовительных работ",
+            class: "effect--right"
+        },
+        {
+            number: "03",
+            text: "Разрабатываем меры по улучшению качества воды",
+            class: "effect--left"
+        },
+        {
+            number: "04",
+            text: "Доставляем системы очистки на объект",
+            class: "effect--right"
+        },
+        {
+            number: "05",
+            text: "Устанавливаем оборудование",
+            class: "effect--left"
+        }
+    ]
+
+section.stages#stages
+    .circle
+        picture
+            source(srcset="img/effects/circle.png" type="image/webp")
+            source(srcset="img/effects/circle.png" type="image/png")
+            img.lazy(src="img/effects/circle.png" alt="")
+    .l-default 
+        h2.stages__title.title.title--h2.effect.effect--left Этапы работы:
+        .stages__items
+            each stage in stages 
+                .stages__item.effect(class=stage.class)
+                    .stages__item-number= stage.number
+                    .stages__item-text= stage.text
+            .stages__item.effect.effect--right   
+                include ../form/form.pug

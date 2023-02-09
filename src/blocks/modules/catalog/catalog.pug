@@ -1,0 +1,73 @@
+-
+    const catalog_items = [
+        {
+            id: "1",
+            title: "Очистка воды в коттедже",
+            text: "Комплексные решения по удалению любых загрязнений, встречающихся в природной воде.",
+            class: "effect--left"
+        },
+        {
+            id: "2",
+            title: "Ультрафильтрация",
+            text: "Избавит воду от железа, органических примесей, сделает ее прозрачной и восстановит ценные компоненты, содержащиеся в жидкости.",
+            class: "effect--show"
+        },
+        {
+            id: "3",
+            title: "Очистка воды от жесткости",
+            text: "Позволит забыть о накипи и ржавчине, предотвратит проблемы со здоровьем, вызванные потреблением большого количества минералов и солей.",
+            class: "effect--right"
+        },
+        {
+            id: "4",
+            title: "Обработка воды ультрафиолетом",
+            text: "Безопасный и экономичный способ избавиться от патогенных микроорганизмов в воде без применения химреагентов и термической обработки.",
+            class: "effect--left"
+        },
+        {
+            id: "5",
+            title: "Станции обезжелезивания",
+            text: "Вернут воде прозрачность и нормальный вкус, избавят от угроз, связанных с вредным воздействием железа на организм человека, сберегут сантехническое оборудование от налета и ржавчины.",
+            class: "effect--show"
+        },
+        {
+            id: "6",
+            title: "Очистка воды из скважины",
+            text: "Комплекс работ по очистке воды из природных источников и доведению ее до санитарных норм.",
+            class: "effect--right"
+        },
+        {
+            id: "7",
+            title: "Очистка воды в котельной",
+            text: "Предотвратит образование минеральных отложений внутри водонагревательных котлов.",
+            class: "effect--left"
+        },
+        {
+            id: "8",
+            title: "Блочно-модульные станции",
+            text: "Полный пакет работ по проектированию, установке и обслуживанию станций, предназначенных для водозаборных узлов (ВЗУ).",
+            class: "effect--show"
+        },
+        {
+            id: "9",
+            title: "ЛОС",
+            text: "Блочно-модульные установки для очистки хозяйственно-бытовых и промышленных сточных вод.",
+            class: "effect--right"
+        }
+    ]
+section.catalog.bg--violet-light.parallax__container#catalog
+    .circle
+        picture
+            source(srcset="img/effects/circle.png" type="image/webp")
+            source(srcset="img/effects/circle.png" type="image/png")
+            img.lazy(src="img/effects/circle.png" alt="")
+    .l-default
+        h2.catalog__title.title.title--h2.effect.effect--left Каталог
+        .catalog__items
+            each catalog_item in catalog_items 
+                a.catalog__item.slide-id.effect(href="#popup-slider" class=catalog_item.class data-id=catalog_item.id data-fancybox) 
+                    .catalog__item-img
+                        img.lazy(src="img/svg/catalog/" + catalog_item.id + ".svg", alt="")
+                    .catalog__item-title= catalog_item.title
+                    .catalog__item-text= catalog_item.text
+                    .catalog__item-link Подробнее

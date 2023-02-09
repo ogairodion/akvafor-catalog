@@ -1,0 +1,21 @@
+section.quality.effect--wrapper
+    .l-default
+        .quality__block.block__text.block__text--right
+            .quality__block-img.block__text-img.effect.effect--left
+                picture
+                    source(srcset="img/quality/img.webp" type="image/webp")
+                    source(srcset="img/quality/img.jpg" type="image/png")
+                    img.lazy(src="img/quality/img.jpg", alt="")
+            .block__text-text.effect.effect--right
+                h2.block__text-title.title.title--h2 Качество воды – качество жизни
+                .block__text-p  
+                    p Неочищенная вода из природных источников является благоприятной средой для бактерий и вирусов, а переизбыток металлов в питьевой воде влечет за собой проблемы со здоровьем.   
+                    p К тому же, соли и металлы, содержащиеся в такой воде, оседают внутри сантехники, провоцируя образование налета и ржавчины, и, как следствие, быстрый износ техники.
+        .quality__block.block__text.block__text--left
+            h2.block__text-title.title.title--h2.effect.effect--left Как сделать воду безопасной?
+            .block__text-wrapper
+                .block__text-p.effect.effect--left
+                    p К счастью, современные технологии водоочистки позволяют решить все эти проблемы с помощью систем фильтрации, которые подбираются исходя из каждого конкретного случая.
+                    p Разобраться в разнообразии продукции вам помогут наши специалисты: высококвалифицированные химики-технологи, инженеры и менеджеры.
+                .block__text-form.effect.effect--right
+                    include ../form/form.pug

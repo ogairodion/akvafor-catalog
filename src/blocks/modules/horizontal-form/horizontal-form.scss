@@ -1,0 +1,38 @@
+.horizontal-form {
+    max-width: 835px;
+    .l-default {
+        padding: 0;
+    }
+    .form {
+        position: relative;
+        z-index: 2;
+        &__inputs {
+            display: flex;
+            @media screen and (max-width: 767px) {
+                flex-wrap: wrap;
+            }
+        }
+        &__input {
+            margin-right: 28px;
+            @media screen and (max-width: 767px) {
+                margin-right: 0;
+            }
+            input {
+                border: 1px solid #C4C4C4;
+                box-sizing: border-box;
+                border-radius: 14px;
+                padding-left: 21px;
+            }
+        }
+        &__input, &__submit {
+            width: 33.333%;
+            min-height: 57px;
+            box-sizing: border-box;
+            @media screen and (max-width: 767px) {
+                width: 100%;
+                min-height: 38px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

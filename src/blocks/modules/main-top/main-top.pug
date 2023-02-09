@@ -1,0 +1,38 @@
+section.main-top.bg--violet.parallax__container
+    .circle
+        picture
+            source(srcset="img/effects/footer_image.webp" type="image/webp")
+            source(srcset="img/effects/footer_image.png" type="image/png")
+            img.lazy(src="img/effects/footer_image.png" alt="")
+    .l-default  
+        .main-top__wrapper
+            .main-top__info.effect.effect--left
+                h1.main-top__title.title.title--h1 Аквафор Трейдинг <br>Системы<br> очистки воды
+                .main-top__subtitle Поможем выбрать, привезем, установим в короткие сроки.
+                .main-top__info-items
+                    .main-top__info-item <span>1000 +</span> Успешных проектов    
+                    .main-top__info-item <span>2007</span> Год основания компании 
+                .main-top__guarantee
+                    .main-top__guarantee-img 
+                        img.lazy(src="img/svg/quarantee.svg", alt="")
+                    .main-top__guarantee-text Гарантия качества на всех этапах проекта
+            .main-top__slider.swiper-container.effect.effect--right-up
+                .swiper-wrapper 
+                    .swiper-slide
+                        picture
+                            source(srcset="img/main/slider/1.webp" type="image/webp")
+                            source(srcset="img/main/slider/1.jpg" type="image/jpg")
+                            img.lazy(src="img/main/slider/1.jpg" alt="")
+                    .swiper-slide
+                        picture
+                            source(srcset="img/main/slider/2.webp" type="image/webp")
+                            source(srcset="img/main/slider/2.jpg" type="image/jpg")
+                            img.lazy(src="img/main/slider/2.jpg" alt="")
+                    .swiper-slide
+                        picture
+                            source(srcset="img/main/slider/3.webp" type="image/webp")
+                            source(srcset="img/main/slider/3.jpg" type="image/jpg")
+                            img.lazy(src="img/main/slider/3.jpg" alt="")
+            .main-top__circle.main-top__circle--small.parallax__item.effect--show(data-speed="0.8")
+            .main-top__circle.main-top__circle--big.parallax__item.effect--show(data-speed="-0.8")
+        include ../horizontal-form/horizontal-form.pug
